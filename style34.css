@@ -1,0 +1,43 @@
+@charset "UTF-8*";
+
+.curso {
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    border: 4px solid #888;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 20px auto;
+    cursor: pointer;
+}
+
+.curso:hover {
+    border-color: #f00;
+}
+
+.c1 {
+    background-color: #ccc;
+    color: #444;
+} 
+
+.c2 {
+    background-color: #444;
+    color: #ccc;
+}
+
+.c3 {
+    background-color: lightpink;
+}
+
+.destaque {
+    background-color: #800 !important;
+    color: #fcc !important;
+    border-color: #f00 !important;
+}
+
+.destaque:hover {
+    border-color: black !important; /* !important = é para importar esses elementos para o Javascript*/
+    color: black !important;
+    font-weight: 800 !important;
+    transform: scale(1.05) !important;
+}
