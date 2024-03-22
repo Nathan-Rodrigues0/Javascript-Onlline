@@ -7,7 +7,7 @@ curso.map((el,chave)=>{
     newElement.setAttribute("id","c"+chave)
     newElement.setAttribute("class","curso c1")
     newElement.innerHTML = el
-    newElement.style.backgroundColor = "#ddff"
+    newElement.style.backgroundColor = "#df7f"
     caixa.appendChild(newElement)
 
     const lixo = document.createElement("img")
