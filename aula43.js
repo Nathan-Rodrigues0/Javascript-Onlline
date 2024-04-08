@@ -23,3 +23,19 @@ cursos.map((el,chave)=>{
 
     caixaCursos.appendChild(newElement)
 })
+
+btnSelection.addEventListener("click",(evt)=>{
+    const radious = [...document.querySelectorAll("input[type=radio]")]
+    let radiousSelection = radious.filter((el)=>{
+        return el.checked
+    })
+    radiousSelection=radiousSelection[0]
+    // const cursoSelection = radiousSelection.parentNode.parentNode.firstChild.textContent // pegando o texto contido < primeiro elemento < pai do elemento < avô do primeiro elemento
+
+    const cursoSelection = radiousSelection.parentNode.parentNode.firstChild.textContent
+    alert("Curso selecionado: " + cursoSelection)
+
+    console.log(radious)
+    console.log(radiousSelection)
+    console.log(cursoSelection)
+})
