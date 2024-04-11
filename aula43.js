@@ -1,4 +1,4 @@
-//criando e definindo elementosdo HTML para o JS
+//criando e definindo elementos do HTML para o JS
 
 const caixaCursos = document.querySelector("#caixaCursos")
 const btn_c = [...document.querySelectorAll(".curso")]
