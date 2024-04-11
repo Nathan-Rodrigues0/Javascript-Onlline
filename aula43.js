@@ -3,7 +3,7 @@
 const caixaCursos = document.querySelector("#caixaCursos")
 const btn_c = [...document.querySelectorAll(".curso")]
 const c1_2 = document.querySelector("#c1_2")
-const cursos = ["HTML","CSS","Javascript","PHP","React","MySQL","React Native"]
+const cursos = ["HTML","CSS","Javascript","PHP","React","MySQL","React Native"]//function map()
 const btnSelection = document.getElementById("btnSelection")
 
 cursos.map((el,chave)=>{
@@ -43,7 +43,7 @@ cursos.map((el,chave)=>{
         //criando um elemento que recebe a posição da variavel < o pai dela < avô < primeiro elemento filho < e o texto contido dentro desse elemento
         const cursoSelection = radiousSelection.parentNode.parentNode.firstChild.textContent
 
-        alert("Curso selecionado: " +  cursoSelectionn)
+        alert("Curso selecionado: " +  cursoSelection)
 
         //monstrando no console os resultados
 
