@@ -26,19 +26,21 @@ cursos.map((el,chave)=>{
     newElement.appendChild(comandos)
     caixaCursos.appendChild(newElement)
 
-    //criando um evento de click no elemento (btnSelection)
-    btnSelection.addEventListener("click",(evt)=>{
-
+    const cursoSelection = () =>{
         //criando um input com atributo
         const radio = [...document.querySelectorAll("input[type=radio]")]
-
+    
         //criando uma variavel que filtra o elmento anterior e retorna o elemento checkado
-        let radiousSelection = radio.filter((el)=>{
+        const radiousSelection = radio.filter((el)=>{
             return el.checked
         })
-
+    
         //a variavel recebe ela na primeira posição
-        radiousSelection=radiousSelection[0]
+        return radiousSelection[0]
+    }
+
+    //criando um evento de click no elemento (btnSelection)
+    btnSelection.addEventListener("click",(evt)=>{
 
         //criando um elemento que recebe a posição da variavel < o pai dela < avô < primeiro elemento filho < e o texto contido dentro desse elemento
         const cursoSelection = radiousSelection.parentNode.parentNode.firstChild.textContent
