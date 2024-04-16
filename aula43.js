@@ -7,6 +7,7 @@ const cursos = ["HTML","CSS","Javascript","PHP","React","MySQL","React Native"]/
 const btnSelection = document.getElementById("btnSelection")
 const btnRemoved = document.getElementById("btnRemoved")
 
+//criando uma função .map() para mapear a const cursos e criar os elementos
 cursos.map((el,chave)=>{
     //criando e dando atributos em um novo elemento (div) só no JS
     const newElement = document.createElement("div")
@@ -28,6 +29,7 @@ cursos.map((el,chave)=>{
     caixaCursos.appendChild(newElement)
 })
 
+    //criando uma constante que tem um arrow function
     const radioSelection = () =>{
         //criando um input com atributo
         const radio = [...document.querySelectorAll("input[type=radio]")]
@@ -45,7 +47,7 @@ cursos.map((el,chave)=>{
     btnSelection.addEventListener("click",(evt)=>{
 
         const rs =radioSelection()
-        try{//try == if
+        try{//try == if / catch == else
             //criando um elemento que recebe a posição da variavel < o pai dela < avô < primeiro elemento filho < e o texto contido dentro desse elemento
             const cursoSelection = rs.parentNode.parentNode.firstChild.textContent
             alert("Curso selecionado: " + cursoSelection)
@@ -54,8 +56,10 @@ cursos.map((el,chave)=>{
         }
     })
 
+    //criando um evento que tem uma função if e else que preocura retornar o elemento removido
     btnRemoved.addEventListener("click",(evt)=>{
         const rs = radioSelection()
+        //preocura que o elemento rs esteja diferente que indefinido
         if(rs!=undefined){
             const cursoSelection = rs.parentNode.parentNode
             cursoSelection.remove()
