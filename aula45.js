@@ -81,12 +81,14 @@ cursos.map((el,chave)=>{
         }
     })
 
+    //adicionamdo um evento nesse botão
 btnAddBefore.addEventListener("click",(evt)=>{
     const rs = radioSelection()
     try{
         if(nameCurso.value!=""){
             const cursoSelection = rs.parentNode.parentNode
             const newCurso = createNewCurso(nameCurso.value)
+            //.insertBefore = adicionando  o newCurso antes do cursoSelection
             caixaCursos.insertBefore(newCurso,cursoSelection)
         }else{
             alert("Digite o nome do curso!")
