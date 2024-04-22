@@ -12,12 +12,23 @@ const nameCurso = document.getElementById("nomeCurso")
 
 let indice = 0 //esssa variavel vai dar a posição do elemento e id
 
+const throwSelection=()=>{
+    const cursosSelection=[...document.querySelectorAll(".selecionado")]
+    cursosSelection.map((el)=>{
+        el.classList.remove("selecionado")
+    })
+}
+
 const createNewCurso=(curso)=>{
     //criando e dando atributos em um novo elemento (div) só no JS
     const newElement = document.createElement("div")
     newElement.setAttribute("id","c"+indice)
     newElement.setAttribute("class","curso c1")
     newElement.innerHTML = curso
+    newElement.addEventListener("click",(evt)=>{
+        throwSelection()
+        evt.target.classList.toggle("selecionado")
+    })
     
     const comandos = document.createElement("div")
     comandos.setAttribute("class","comandos")
