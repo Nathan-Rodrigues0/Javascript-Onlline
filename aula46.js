@@ -12,6 +12,7 @@ const nameCurso = document.getElementById("nomeCurso")
 
 let indice = 0 //esssa variavel vai dar a posição do elemento e id
 
+//criando uma função para remover o curso selecionado
 const throwSelection=()=>{
     const cursosSelection=[...document.querySelectorAll(".selecionado")]
     cursosSelection.map((el)=>{
@@ -26,7 +27,9 @@ const createNewCurso=(curso)=>{
     newElement.setAttribute("class","curso c1")
     newElement.innerHTML = curso
     newElement.addEventListener("click",(evt)=>{
+        //chamando a função remover 
         throwSelection()
+        //listando um evento toggle que alterna o estado de selecioando de um para outro elemento
         evt.target.classList.toggle("selecionado")
     })
     return newElement
